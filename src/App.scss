@@ -1,4 +1,9 @@
 .container {
+  padding: 10rem 10rem 0rem 10rem;
+  background-color: red;
+  display: flex;
+  row-gap: 5rem;
+  flex-direction: column;
 }
 /*
 .App {

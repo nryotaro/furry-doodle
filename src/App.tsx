@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import { Helmet } from 'react-helmet';
+import SearchForm from './components/Search/Form';
+import SearchResults from './components/Search/Results';
 
 function App() {
   return <div className='container'>
@@ -9,7 +11,8 @@ function App() {
       <title>Demo</title>
       <meta name="viewport" content="width=device-width,initial-scale=1"></meta>
     </Helmet>
-    fuga
+    <SearchForm/>
+    <SearchResults/>
   </div>;
 }
 

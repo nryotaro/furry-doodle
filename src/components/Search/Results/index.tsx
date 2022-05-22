@@ -1,17 +1,18 @@
 import styles from './index.module.scss';
 import Editor from '../../Editor';
 import { useState } from 'react';
+import useEditor from '../../../hooks/useEditor';
 
 function Results() {
-  const [editorEnable, setEditorEnable] = useState<boolean>(false);
+  const [company, setCompany] = useEditor();
 
   return <div>
     <button onClick={() => {
-      setEditorEnable(true);
+      setCompany('doge');
       }}>
       results
     </button>
-    <Editor enable={editorEnable}/>
+    <Editor company={company} setCompany={setCompany}/>
     <table>
       <thead>
         <tr>

@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
 import styles from './index.module.scss';
 
-type EditorProps = {
+interface EditorProps {
   company: string | null,
   setCompany: (company: string | null) => void,
 };

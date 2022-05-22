@@ -1,7 +1,9 @@
+import Fragment from '../../Fragment';
 import styles from './index.module.scss';
 
 function Form() {
-  return <div className={styles.container}>
+
+  return <Fragment>
     <div className={styles.options}>
       <div>
         <div>Industry</div>
@@ -13,7 +15,7 @@ function Form() {
       </div>
       <div>
         <div>Total Funding Amount</div>
-        <input/>
+        <input />
       </div>
       <div>
         <div>Last Funding Date</div>
@@ -24,7 +26,7 @@ function Form() {
     <div className={styles.search}>
       <button>Search</button>
     </div>
-  </div>;
+  </Fragment>
 }
 
 export default Form;

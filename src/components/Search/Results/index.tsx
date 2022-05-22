@@ -2,11 +2,12 @@ import styles from './index.module.scss';
 import Editor from '../../Editor';
 import { useState } from 'react';
 import useEditor from '../../../hooks/useEditor';
+import Fragment from '../../Fragment';
 
 function Results() {
   const [company, setCompany] = useEditor();
 
-  return <div>
+  return <Fragment>
     <button onClick={() => {
       setCompany('doge');
       }}>
@@ -31,7 +32,7 @@ function Results() {
         </tr>
       </tbody>
     </table>
-  </div>;
+  </Fragment>
 }
 
 export default Results;

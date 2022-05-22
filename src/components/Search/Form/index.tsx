@@ -1,3 +1,4 @@
+import Button from '../../Button';
 import Fragment from '../../Fragment';
 import styles from './index.module.scss';
 
@@ -24,7 +25,7 @@ function Form() {
       </div>
     </div>
     <div className={styles.search}>
-      <button>Search</button>
+      <Button>Search</Button>
     </div>
   </Fragment>
 }

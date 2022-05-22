@@ -1,13 +1,5 @@
-.container {
-    background-color: pink;
-}
 
-.container > .options {
-
-}
-
-.container > .search {
-   background-color: blue; 
+.search {
    display: flex;
    flex-direction: row-reverse;
 }

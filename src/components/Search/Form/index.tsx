@@ -1,5 +1,6 @@
 import Button from '../../Button';
 import Fragment from '../../Fragment';
+import Headline from '../../Headline';
 import styles from './index.module.scss';
 
 function Form() {
@@ -7,12 +8,13 @@ function Form() {
   return <Fragment>
     <div className={styles.options}>
       <div>
-        <div>Industry</div>
-        <select>
-          <option value='doge'>option1</option>
+        <div><Headline>Industry</Headline></div>
+        <input type='text' list="industries"/>
+        <datalist id="industries">
+          <option value='dogeeeeeeeeeeeeeeeee'>option1</option>
           <option value='doge2'>option2</option>
           <option value='doge3'>option3</option>
-        </select>
+        </datalist>
       </div>
       <div>
         <div>Total Funding Amount</div>

@@ -2,6 +2,7 @@ import Button from '../../Button';
 import Fragment from '../../Fragment';
 import styles from './index.module.scss';
 import IndustryDropbown from './IndustryDropdown';
+import LastFundingDate from './LastFundingDate';
 import TotalFundingAmount from './TotalFundingAmount';
 
 function Form() {
@@ -10,11 +11,7 @@ function Form() {
     <div className={styles.options}>
       <IndustryDropbown/>
       <TotalFundingAmount/>
-      <div>
-        <div>Last Funding Date</div>
-        <input />
-        <input />
-      </div>
+      <LastFundingDate/>
       <div>classified, not classified</div>
     </div>
     <div className={styles.search}>

@@ -1,0 +1,29 @@
+.results {
+    color: #363636;
+    font-size: 1.8rem;
+    border-collapse: collapse;
+    thead {
+        background-color: #f8f8f8;
+        border: 1px solid #e5e5e5;
+    }
+    th {
+        border: none;
+    }
+    tbody {
+        tr {
+            border-bottom: 1px solid #e5e5e5;
+            cursor: pointer;
+
+            a {
+                color: #404fbf;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+        }
+    }
+
+}

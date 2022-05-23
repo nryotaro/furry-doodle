@@ -2,7 +2,6 @@ import styles from './index.module.scss';
 import Select from 'react-select';
 
 interface DatalistProps<T> {
-    id: string,
     placeholder: string,
     items: T[],
     valueFactory: (item: T) => string | number

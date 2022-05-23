@@ -2,16 +2,14 @@ import Button from '../../Button';
 import Fragment from '../../Fragment';
 import styles from './index.module.scss';
 import IndustryDropbown from './IndustryDropdown';
+import TotalFundingAmount from './TotalFundingAmount';
 
 function Form() {
 
   return <Fragment>
     <div className={styles.options}>
       <IndustryDropbown/>
-      <div>
-        <div>Total Funding Amount</div>
-        <input />
-      </div>
+      <TotalFundingAmount/>
       <div>
         <div>Last Funding Date</div>
         <input />

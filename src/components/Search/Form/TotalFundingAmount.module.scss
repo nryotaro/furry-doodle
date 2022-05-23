@@ -1,0 +1,36 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.moneyField {
+    display: flex;
+    gap: 1rem;
+
+    input {
+        height: 2.8rem;
+        border: 0.1rem solid #e5e5e5;
+        border-radius: 0.2rem;
+        &:focus {
+            outline: 1px solid #5361c5;
+            border-radius: 0.2rem;
+            filter: drop-shadow(0 0 0 #e2e5f5);
+        }
+    }
+
+}
+
+.unit {
+    font-size: 1.8rem;
+    color: #191919;
+    display: flex;
+    align-items: center;
+}
+
+
+.range {
+   display: flex; 
+   align-items: center;
+   font-size: 1.8rem;
+}

@@ -11,7 +11,10 @@ function IndustryDropbown() {
 
     return <div>
         <div><Headline>Industry</Headline></div>
-        <Datalist id="industries" items={industries} valueFactory={createIndustryKey} />
+        <Datalist 
+            id='industries'
+            items={industries} 
+            valueFactory={createIndustryKey} />
     </div>
 }
 

@@ -8,8 +8,7 @@ interface DatalistProps<T> {
 }
 function Datalist<T>(props: DatalistProps<T>) {
     return <>
-    <input type='text' list={props.id}>
-    </input>
+    <input type='text' list={props.id} className={styles.field} placeholder={'Doge'}/>
     <datalist id={props.id}>
         {props.items.map(item => {
             const value = props.valueFactory(item);

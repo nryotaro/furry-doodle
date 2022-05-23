@@ -19,6 +19,7 @@ function Form() {
         <input />
         <input />
       </div>
+      <div>classified, not classified</div>
     </div>
     <div className={styles.search}>
       <Button>Search</Button>

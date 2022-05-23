@@ -1,7 +1,5 @@
 import Button from '../../Button';
-import Datalist from '../../Dropdown/Datalist';
 import Fragment from '../../Fragment';
-import Headline from '../../Headline';
 import styles from './index.module.scss';
 import IndustryDropbown from './IndustryDropdown';
 

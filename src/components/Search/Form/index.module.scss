@@ -1,4 +1,8 @@
-
+.options {
+   display: flex;
+   gap: 4rem;
+   flex-wrap: wrap;
+}
 .search {
    display: flex;
    flex-direction: row-reverse;

@@ -9,7 +9,7 @@ export async function getJson(
     for (let [key, value] of Object.entries(queryParameters)) {
         searchParams.append(key, value.toString());
     }
-    if (Array.from(searchParams.entries()).length != 0) {
+    if (Array.from(searchParams.entries()).length !== 0) {
         url.search = searchParams.toString();
     }
     const rawResponse = fetch(url.toString(), {

@@ -1,4 +1,4 @@
-import Button from '../Button';
+import {DangerButton, ActionButton} from '../Button';
 import Headline from '../Headline';
 import styles from './index.module.scss';
 
@@ -52,8 +52,8 @@ function Editor(props: EditorProps) {
         </div>
       </div>
       <div>
-        <Button>Delete</Button>
-        <Button>Save</Button>
+        <DangerButton enable={false} onClick={(e) => {}}>Delete</DangerButton>
+        <ActionButton enable={true} onClick={e=> {}}>Save</ActionButton>
       </div>
     </div>
   </div>

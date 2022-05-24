@@ -8,11 +8,6 @@ function Results() {
   const [company, setCompany] = useEditor();
 
   return <Fragment>
-    <button onClick={() => {
-      setCompany('doge');
-      }}>
-      results
-    </button>
     <Editor company={company} setCompany={setCompany}/>
     <table className={styles.results} width='100%'>
       <thead>
@@ -23,7 +18,10 @@ function Results() {
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr onClick={(e) => {
+          e.stopPropagation();
+         setCompany('doge'); 
+        }}>
           <td><a href='https://sp-edge.com'>doge</a></td>
           <td>b</td>
           <td>Relevant</td>

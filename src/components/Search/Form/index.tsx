@@ -1,4 +1,4 @@
-import Button from '../../Button';
+import {ActionButton} from '../../Button';
 import Fragment from '../../Fragment';
 import ClassificationStatus from './ClassificationStatus';
 import CompanyName from './CompanyName';
@@ -18,7 +18,7 @@ function Form() {
       <CompanyName/>
     </div>
     <div className={styles.search}>
-      <Button>Search</Button>
+      <ActionButton enable={false} onClick={() => {}}>Search</ActionButton>
     </div>
   </Fragment>
 }

@@ -7,6 +7,7 @@
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
+  min-width: var(--min-window-width);
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -16,9 +17,9 @@
 .modalContent {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  padding: 2rem;
+  border: 1px solid #e5e5e5;
+  width: 56%; /* Could be more or less, depending on screen size */
 
   border-radius: 5px;
 }
@@ -41,6 +42,7 @@
 .properties {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1.6rem;
 }
 
 .property {
@@ -91,4 +93,10 @@
       border-radius: 0.2rem;
       filter: drop-shadow(0 0 0 #e2e5f5);
   }
+}
+
+.actions {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1.6rem;
 }

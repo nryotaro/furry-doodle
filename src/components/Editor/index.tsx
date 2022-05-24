@@ -51,9 +51,9 @@ function Editor(props: EditorProps) {
           <textarea className={styles.comment}></textarea>
         </div>
       </div>
-      <div>
-        <DangerButton enable={false} onClick={(e) => {}}>Delete</DangerButton>
+      <div className={styles.actions}>
         <ActionButton enable={true} onClick={e=> {}}>Save</ActionButton>
+        <DangerButton enable={false} onClick={(e) => {}}>Delete</DangerButton>
       </div>
     </div>
   </div>

@@ -42,6 +42,8 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 1.6rem;
+  font-size: 1.2rem;
+  gap: 8px;
 }
 
 .property {
@@ -49,14 +51,14 @@
 
 }
 .propertyName {
-  flex-basis: 12rem;
+  flex-basis: 16rem;
 }
 
 .comment {
   border: 0.1rem solid #e5e5e5;
   border-radius: 0.2rem;
   height: 9.6rem;
-  width: 54rem;
+  flex-grow: 1;
   color: #191919;
   &:focus {
       outline: 0.1rem solid #5361c5;

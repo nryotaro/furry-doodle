@@ -8,6 +8,14 @@ interface ResultsProps {
   companies: Company[],
 }
 
+function pseudoClassification(companyId: number) {
+  if(companyId % 2 == 0)
+    return '-';
+  if(companyId % 3 == 0)
+    return 'Relevant';
+  return 'Irrelevant';
+}
+
 function Results(props: ResultsProps) {
   const [company, setCompany] = useEditor();
 
@@ -30,31 +38,15 @@ function Results(props: ResultsProps) {
                 setCompany(company);
               }}>
                 <td>
-                  <a href={`https://sp-edge.com/companies/${company.id}`}>{company.name}</a>
+                  <a href={`https://sp-edge.com/companies/${company.id}`} target="_blank">{company.name}</a>
                 </td>
                 <td className={styles.score}>{company.scores[1]}</td>
-                <td className={styles.classification}>-</td>
+                <td className={styles.classification}>
+                  {pseudoClassification(company.id)}
+                </td>
               </tr>
             })
           }
-          {/* <tr onClick={(e) => {
-            e.stopPropagation();
-            setCompany('doge');
-          }}>
-            <td><a href='https://sp-edge.com'>doge</a></td>
-            <td className={styles.score}><span>b</span></td>
-            <td className={styles.classification}>Relevant</td>
-          </tr>
-          <tr>
-            <td>a</td>
-            <td>b</td>
-            <td>Irrelevant</td>
-          </tr>
-          <tr>
-            <td>a</td>
-            <td>b</td>
-            <td>-</td>
-          </tr> */}
         </tbody>
       </table>
     </div>

@@ -3,7 +3,7 @@ import Headline from '../../Headline';
 import styles from './Field.module.scss';
 
 interface FieldProps {
-    headline: string,
+    headline: ReactNode,
     children: ReactNode,
 }
 

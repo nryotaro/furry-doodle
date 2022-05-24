@@ -7,7 +7,8 @@ import Field from './Field';
 
 function IndustryDropbown() {
     const [industries, createIndustryKey] = useIndustryDropdown();
-    return <Field headline='Industry'>
+
+    return <Field headline={'Industry*'}>
         <div className={styles.content}>
             <Datalist
                 items={industries}

@@ -1,7 +1,8 @@
+import { ReactNode } from 'react';
 import styles from './index.module.scss';
 
 interface HeadlineProps {
-    children: string,
+    children: ReactNode,
 }
 
 function Headline(props: HeadlineProps) {

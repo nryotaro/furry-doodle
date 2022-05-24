@@ -21,20 +21,6 @@ function Datalist<T>(props: DatalistProps<T>) {
                 console.log(i)
             }} />
     </div>
-
-
-    // return <div >
-    //     <input type='text' list={props.id}
-    //         className={styles.field}
-    //         placeholder={props.placeholder} />
-    //     <div className={styles.arrow} />
-    //     <datalist id={props.id}>
-    //         {props.items.map(item => {
-    //             const value = props.valueFactory(item);
-    //             return <option key={value} value={value}></option>
-    //         })}
-    //     </datalist>
-    // </div>
 }
 
 export default Datalist;

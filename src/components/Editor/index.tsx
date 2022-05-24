@@ -1,6 +1,7 @@
 import {DangerButton, ActionButton} from '../Button';
 import Headline from '../Headline';
 import styles from './index.module.scss';
+import RelevanceSelector from './RelevanceSelector';
 
 interface EditorProps {
   company: string | null,
@@ -18,8 +19,8 @@ function Editor(props: EditorProps) {
     props.setCompany(null);
   }}>
     <div className={styles.modalContent} onClick={(e) => {e.stopPropagation();}}>
-      <span className={styles.close}>&times;</span>
-      <div>
+      <span className={styles.close} onClick={() => props.setCompany(null)}>&times;</span>
+      <div className={styles.headline}>
         <Headline>Classification</Headline>
       </div>
       <div className={styles.properties}>
@@ -33,18 +34,7 @@ function Editor(props: EditorProps) {
         </div>
         <div className={styles.property}>
           <div className={styles.propertyName}>Industry Relevance</div>
-          <div className={styles.relevance}>
-            <input 
-                type='radio' 
-                name='classification' 
-                value='relevant' 
-                id='editorClassificationRelevant'/>
-            <div className={styles.pseudoCheck}></div>
-            <label htmlFor='editorClassificationRelevant'>Relevant</label>
-            <input type='radio' name='classification' value='irrevant' id='editorClassificationIrrelevant'/>
-            <div className={styles.pseudoCheck}></div>
-            <label htmlFor='editorClassificationIrrelevant'>Irrelevant</label>
-          </div>
+          <RelevanceSelector/>
         </div>
         <div className={styles.property}>
           <div className={styles.propertyName}>Comment</div>

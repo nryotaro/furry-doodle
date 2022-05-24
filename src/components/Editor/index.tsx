@@ -1,11 +1,12 @@
+import { Company } from '../../lib/company';
 import {DangerButton, ActionButton} from '../Button';
 import Headline from '../Headline';
 import styles from './index.module.scss';
 import RelevanceSelector from './RelevanceSelector';
 
 interface EditorProps {
-  company: string | null,
-  setCompany: (company: string | null) => void,
+  company: Company | null,
+  setCompany: (company: Company | null) => void,
 };
 
 function Editor(props: EditorProps) {
@@ -26,7 +27,7 @@ function Editor(props: EditorProps) {
       <div className={styles.properties}>
         <div className={styles.property}>
           <div className={styles.propertyName}>Company</div>
-          <div className={styles.propertyValue}>Doge</div>
+          <div className={styles.propertyValue}>{props.company.name}</div>
         </div>
         <div className={styles.property}>
           <div className={styles.propertyName}>Industry</div>

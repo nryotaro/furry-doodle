@@ -18,7 +18,7 @@ function Form() {
       <CompanyName/>
     </div>
     <div className={styles.search}>
-      <ActionButton enable={false} onClick={() => {}}>Search</ActionButton>
+      <ActionButton enable={true} onClick={() => {}}>Search</ActionButton>
     </div>
   </Fragment>
 }

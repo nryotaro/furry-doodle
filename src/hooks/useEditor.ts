@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { Company } from "../lib/company";
 
-function useEditor(): [string | null, (company: string | null) => void] {
+function useEditor(): [Company | null, (company: Company | null) => void] {
     const [company, setCompany]
-        = useState<string | null>(null);
+        = useState<Company | null>(null);
     return [company, setCompany];
 }
 

@@ -2,8 +2,13 @@ import styles from './index.module.scss';
 import Editor from '../../Editor';
 import useEditor from '../../../hooks/useEditor';
 import Fragment from '../../Fragment';
+import { Company } from '../../../lib/company';
 
-function Results() {
+interface ResultsProps {
+  companies: Company[],
+}
+
+function Results(props: ResultsProps) {
   const [company, setCompany] = useEditor();
 
   return <Fragment>
@@ -18,7 +23,21 @@ function Results() {
           </tr>
         </thead>
         <tbody>
-          <tr onClick={(e) => {
+          {
+            props.companies.map(company => {
+              return <tr onClick={(e) => {
+                e.stopPropagation();
+                setCompany(company);
+              }}>
+                <td>
+                  <a href={`https://sp-edge.com/companies/${company.id}`}>{company.name}</a>
+                </td>
+                <td className={styles.score}>{company.scores[1]}</td>
+                <td className={styles.classification}>-</td>
+              </tr>
+            })
+          }
+          {/* <tr onClick={(e) => {
             e.stopPropagation();
             setCompany('doge');
           }}>
@@ -35,7 +54,7 @@ function Results() {
             <td>a</td>
             <td>b</td>
             <td>-</td>
-          </tr>
+          </tr> */}
         </tbody>
       </table>
     </div>

@@ -1,3 +1,6 @@
+.container {
+    height: 48vh;
+}
 .results {
     color: #363636;
     font-size: 1.8rem;
@@ -27,6 +30,12 @@
                 background-color: #ededed;
             }
 
+        }
+        td.score {
+            text-align: right;
+        }
+        td.classification {
+            text-align: center;
         }
     }
 

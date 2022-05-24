@@ -1,10 +1,9 @@
-import React from 'react';
-import './App.scss';
+import styles from './App.module.scss';
 import SearchForm from './components/Search/Form';
 import SearchResults from './components/Search/Results';
 
 function App() {
-  return <div className='container'>
+  return <div className={styles.container}>
     <SearchForm/>
     <SearchResults/>
   </div>;
